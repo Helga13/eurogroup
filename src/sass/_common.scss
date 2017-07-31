@@ -1368,6 +1368,7 @@ header{
 			display: inline-block;
 			padding:  0 12px;
 			position: relative;
+          text-transform: none;
 			&:before,
 			&:after{
 				content: '';
@@ -1405,7 +1406,7 @@ header{
 	} 
 	&.stock{
 		background: #f3836f; /* Old browsers */ 
-    background: linear-gradient(#f3836f 93%, #f3836f 93%, #261e54 90%); 
+        background: linear-gradient(#f3836f 93%, #f3836f 93%, #261e54 90%); 
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3836f', endColorstr='#261e54',GradientType=0 ); /* IE6-9 */
 		.stock_block{
 			position: absolute;
@@ -1420,6 +1421,20 @@ header{
 			left: 5px;
 			right: 5px;
 		}
+      .price{
+        color: #f3836f;
+        .old{
+          color: #ced7e1;
+          font-size: 12px;
+          text-decoration: line-through;
+          font-family: 'rubikRegular', $font-stack-helvetica;
+          margin-right: 4px;
+        }
+        &:before,
+        &:after{
+          display: none;
+        }
+      }
 	}
 }
 
