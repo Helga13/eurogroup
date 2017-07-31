@@ -29,27 +29,43 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
 
 $(document).ready(function () {
   
-  var body = $("body");
+  var body = $('body');
     
     // menu
 	$('.js-toggle-menu').on('click', function(e) {
         e.preventDefault();
-		if ($(this).hasClass("is-active")) {
-			$("#js-menu").fadeOut(100);
-			$(this).removeClass("is-active");
-            body.removeClass("no-scroll");
+		if ($(this).hasClass('is-active')) {
+			$('#js-menu').fadeOut(100);
+			$(this).removeClass('is-active');
+            body.removeClass('no-scroll');
 		} else {
-			$("#js-menu").fadeIn(100);
-			$(this).addClass("is-active");
-            body.toggleClass("no-scroll");
+			$('#js-menu').fadeIn(100);
+			$(this).addClass('is-active');
+            body.toggleClass('no-scroll');
+		}
+		return false;
+	});
+	
+	//search
+	
+	$('.js-search').on('click', function(e) {
+        e.preventDefault();
+		if ($(this).hasClass('is-active')) {
+			$("#js-search").fadeOut(100);
+			$(this).removeClass('is-active');
+            body.removeClass('no-scroll');
+		} else {
+			$('#js-search').fadeIn(100);
+			$(this).addClass('is-active');
+            body.toggleClass('no-scroll');
 		}
 		return false;
 	});
   
   $('.popup_close').on('click', function(e){
     e.preventDefault();
-    $("#js-menu").fadeOut(100);
-    $('.js-toggle-menu').removeClass("is-active");
+    $('#js-menu, #js-search').fadeOut(100);
+    $('.js-toggle-menu, .js-search').removeClass('is-active');
     body.removeClass("no-scroll");
   });
 	
