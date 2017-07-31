@@ -280,12 +280,20 @@
 		<path class="c11" d="M4.29,20.41a5.93,5.93,0,0,0,4.87,4,6,6,0,0,0,6.18-4A6.7,6.7,0,0,0,27.77,20a6.44,6.44,0,0,0,11.92-.29,7.74,7.74,0,0,0,7.41,4A8,8,0,0,0,53,19.83a6.52,6.52,0,0,0,12.67-.65c1.65,3.52,5.18,5.47,8.45,4.89a7.84,7.84,0,0,0,5.11-3.78"/>
 	</symbol>
 </svg>
+
+<!--popup-->
+
+<svg style="display: none">
+  <symbol id="s-close" viewBox="0 0 40 40">
+    <polygon points="35.41 8.01 31.99 4.59 20 16.58 8.01 4.59 4.59 8.01 16.58 20 4.59 31.99 8.01 35.41 20 23.42 31.99 35.41 35.41 31.99 23.42 20 35.41 8.01" fill="#aca9be"/>
+  </symbol>
+</svg>
 <header>
 	<div class="nav_top">
-		<a href="#" class="menu_btn js-btn">
+		<a href="#" class="menu_btn js-toggle-menu">
 			<svg xmlns="http://www.w3.org/2000/svg" class="icon-burger">
-      	<use xlink:href="#s-burger"></use>
-    	</svg>
+      	        <use xlink:href="#s-burger"></use>
+    	    </svg>
     	<span>Меню</span>
 		</a>
 		<ul class="add_menu">
@@ -451,6 +459,90 @@
 	</div>
 	<div class="copyright">&copy; НП ООО «Еврогрупп». 2017</div>
 </footer>
+<div class="overlay popup" id="js-menu">
+	<div class="popup_content">
+	<a href="#" class="popup_close">
+	    <svg xmlns="http://www.w3.org/2000/svg" class="">
+      	     <use xlink:href="#s-close"></use>
+        </svg>
+	</a>
+		<div class="popup_title">Меню сайта</div>
+		<div class="popup_subtitle">Товары</div>
+		<ul>
+		  <li><a href="#" class="caption">Газы в газообразном виде</a></li>
+		  <li><a href="#">Азот</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#" class="caption">Сухой лед</a></li>
+		  <li><a href="#" class="caption">Баллоны для газов</a></li>
+		  <li><a href="#">Баллоны б/у</a></li>
+		  <li><a href="#">Новые баллоны</a></li>
+		  <li><a href="#">Вентеля</a></li>
+		</ul>
+		<ul>
+		  <li><a href="#" class="caption">Редкие и чиcтые газы</a></li>
+		  <li><a href="#">Азот</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#" class="caption">Газовые смеси</a></li>
+		  <li><a href="#">Сварочные смеси</a></li>
+		  <li><a href="#">Пищевые смеси</a></li>
+		  <li><a href="#">Лазерные смеси</a></li>
+		  <li><a href="#" class="caption">Редкие и читые газы</a></li>
+		  <li><a href="#">Азот</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Аргон</a></li>
+		</ul>
+		<ul>
+		  <li><a href="#" class="caption">Газы в жидкообразном состоянии</a></li>
+		  <li><a href="#">Азот</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#" class="caption">Оборудование и материалы</a></li>
+		  <li><a href="#">Сварочная проволока</a></li>
+		  <li><a href="#">Щитки</a></li>
+		  <li><a href="#">Электроды</a></li>
+		  <li><a href="#">Перчатки</a></li>
+		  <li><a href="#">Редукторы</a></li>
+		  <li><a href="#">Горелки</a></li>
+		  <li><a href="#" class="caption">Продукция AdBlue</a></li>
+		  <li><a href="#">Реагент Тара</a></li>
+		  <li><a href="#">Оборудование</a></li>
+		</ul>
+		<ul>
+		  <li><a href="#" class="popup_subtitle">Услуги</a></li>
+		  <li><a href="#" class="caption">Аренда баллонов</a></li>
+		  <li><a href="#" class="caption">Перевозка и доставка технических газов</a></li>
+		  <li><a href="#" class="caption">Техническое освидетельствование баллонов</a></li>
+		</ul>
+		<ul>
+		  <li><a href="#" class="popup_subtitle">Статьи</a></li>
+		  <li><a href="#" class="caption">Познавательные статьи</a></li>
+		  <li><a href="#" class="caption">Новости компании</a></li>
+		</ul>
+		<ul>
+		  <li><a href="#" class="popup_subtitle">Полезная информация</a></li>
+		  <li><a href="#" class="caption">О компании</a></li>
+		  <li><a href="#" class="caption">Контакты</a></li>
+		</ul>
+	</div>
+</div>
 <script src="js/common.js"></script>
 </body>
 </html>

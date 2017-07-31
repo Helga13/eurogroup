@@ -1,4 +1,28 @@
 $(document).ready(function () {
+  
+  var body = $("body");
+    
+    // menu
+	$('.js-toggle-menu').on('click', function(e) {
+        e.preventDefault();
+		if ($(this).hasClass("is-active")) {
+			$("#js-menu").fadeOut(100);
+			$(this).removeClass("is-active");
+            body.removeClass("no-scroll");
+		} else {
+			$("#js-menu").fadeIn(100);
+			$(this).addClass("is-active");
+            body.toggleClass("no-scroll");
+		}
+		return false;
+	});
+  
+  $('.popup_close').on('click', function(e){
+    e.preventDefault();
+    $("#js-menu").fadeOut(100);
+    $('.js-toggle-menu').removeClass("is-active");
+    body.removeClass("no-scroll");
+  });
 	
 	// main slider
 	
@@ -65,5 +89,18 @@ $(document).ready(function () {
     });
   }
   number();
+  
+  // catalog toggle
+  
+   $('.slider_toggle > .item.stop').on("click", function(e){
+            e.preventDefault();
+			var a;
+			a = this.id;
+			console.log(a);
+			console.log(true);
+            $('.gaseous_state_block .gaseous_state_item').removeClass('is-active');
+			$('.gaseous_state_block .gaseous_state_item[data-click="'+a+'"]').addClass('is-active');
+		});
+
 	
 })

@@ -76,12 +76,22 @@ textarea{
 	}
 }
 
+.no-scroll {
+    overflow: hidden;
+  header,
+  main,
+  footer{
+    filter: blur(5px);
+    filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=5);
+  } 
+}
+
 .wrap{
 	z-index: 2;
 	position: relative;
 	width: 100%;
 	max-width: 1366px;
-	margin: 0 auto;
+	margin: 0 auto; 
 	padding: 0 18px;
 }
 
@@ -135,7 +145,7 @@ textarea{
 		height: 1px;
 		background-color: #86acd5;
 //		opacity: .7;
-		top: 50%;
+		top: 43%;
 		z-index: -1;
 	}
 	&:before{
@@ -370,6 +380,102 @@ header{
 	}
 }
 
+/* popup */  
+
+.overlay{
+  background-color: rgba(38,30,84,.85);
+}
+
+.popup_content{
+  max-width: 1284px;
+  width: 100%;
+  padding: 36px 20px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 0;
+  .popup_title{
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: 0.005em;
+    font-family: 'rubikBold', $font-stack-helvetica;
+    padding-bottom: 56px;
+  }
+  .popup_subtitle{
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.025em;
+    font-family: 'rubikMedium', $font-stack-helvetica;
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #6d698d;
+  }
+  a{
+    color: #aec6e0;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: 0.01em;
+    font-family: 'rubikLight', $font-stack-helvetica;
+    display: inline-block;
+    margin-left: 40px;
+    border-bottom: 1px solid transparent;
+    margin-right: 20px;
+    transition: color .3s ease-in-out, border-bottom-color .3s ease-in-out;
+    &:hover,
+    &:focus,
+    &:active{
+      color: #f3836f;
+      border-bottom-color: #f3836f;
+    }
+  }
+  a.popup_subtitle{
+    margin: 0;
+    width: 100%;
+    &:hover,
+    &:focus,
+    &:active{
+      color: #fff;
+      border-bottom-color: #6d698d;
+    }
+  }
+  .caption{
+    color: #ced7e1;
+    font-family: 'rubikRegular', $font-stack-helvetica;
+    padding: 10px 0 0 0;
+    margin-left: 22px;
+  }
+  ul{
+    width: 33.333%;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 26px;
+  }
+}
+
+.overlay.popup{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  overflow-y: auto;
+}
+
+.popup_content .popup_close{
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 0;
+  border-bottom: none;
+  svg{
+    width: 100%;
+    height: 100%;
+  }
+}
+
 /* breadcrumbs */
 
 .breadcrumbs{
@@ -453,6 +559,14 @@ header{
 			letter-spacing: 0.025em;
 			text-transform: uppercase;
 			color: #fff;
+//          display: table-cell;
+//          height: 100%;
+          &:after{
+            content: '';
+            display: inline-block;
+			vertical-align: middle;
+            height: 100%;
+          }
 		}
 	}
 	img{
@@ -975,6 +1089,22 @@ header{
 	.btn{
 		margin-top: 22px;
 	}
+}
+
+.gaseous_state_block{
+  position: relative;
+}
+
+.gaseous_state_block .gaseous_state_item{
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  &.is-active{
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+  }
 }
 
 .gaseous_state_slider{

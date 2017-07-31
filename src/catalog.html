@@ -15,8 +15,8 @@
 					<li class="last">Каталог товаров</li>
 				</ul>
 				<div class="page_title">Каталог товаров</div>
-				<div class="catalog_block">
-					<a href="#" class="item">
+				<div class="catalog_block slider_toggle">
+					<a href="#" class="item stop" id="slider1">
 						<figure class="cat_item">
 							<div class="img_block">
 								<svg xmlns="http://www.w3.org/2000/svg" class="s-catalog">
@@ -36,7 +36,7 @@
 							<figcaption><span>CУХОЙ ЛЕД</span></figcaption>
 						</figure>
 					</a>
-					<a href="#" class="item">
+					<a href="#" class="item stop" id="slider2">
 						<figure class="cat_item">
 							<div class="img_block">
 								<svg xmlns="http://www.w3.org/2000/svg" class="s-catalog">
@@ -46,7 +46,7 @@
 							<figcaption><span>Баллоны для газов</span></figcaption>
 						</figure>
 					</a>
-					<a href="#" class="item">
+					<a href="#" class="item stop" id="slider3">
 						<figure class="cat_item">
 							<div class="img_block">
 								<svg xmlns="http://www.w3.org/2000/svg" class="s-catalog">
@@ -56,7 +56,7 @@
 							<figcaption><span>Редкие и чистые газы</span></figcaption>
 						</figure>
 					</a>
-					<a href="#" class="item">
+					<a href="#" class="item stop" id="slider4">
 						<figure class="cat_item">
 							<div class="img_block">
 								<svg xmlns="http://www.w3.org/2000/svg" class="s-catalog">
@@ -66,7 +66,7 @@
 							<figcaption><span>Газовые смеси</span></figcaption>
 						</figure>
 					</a>
-					<a href="#" class="item">
+					<a href="#" class="item stop" id="slider5">
 						<figure class="cat_item">
 							<div class="img_block">
 								<svg xmlns="http://www.w3.org/2000/svg" class="s-catalog">
@@ -76,7 +76,7 @@
 							<figcaption><span>Газы в жидкообразном состоянии</span></figcaption>
 						</figure>
 					</a>
-					<a href="#" class="item">
+					<a href="#" class="item stop" id="slider6">
 						<figure class="cat_item">
 							<div class="img_block">
 								<svg xmlns="http://www.w3.org/2000/svg" class="s-catalog">
@@ -86,7 +86,7 @@
 							<figcaption><span>Оборудование и материалы</span></figcaption>
 						</figure>
 					</a>
-					<a href="#" class="item">
+					<a href="#" class="item stop" id="slider7">
 						<figure class="cat_item">
 							<div class="img_block">
 								<svg xmlns="http://www.w3.org/2000/svg" class="s-catalog">
@@ -102,7 +102,8 @@
 	</section>
 	<section class="main_block gaseous_state_block">
 		<div class="wrap">
-			<div class="title">Газы в газообразном состоянии</div>
+		  <div class="gaseous_state_item is-active" data-click="slider1">
+		    <div class="title">Газы в газообразном состоянии</div>
 			<div class="gaseous_state_slider">
 				<a href="#" class="gaseous_item">
 					<div class="caption">Аргон</div>
@@ -166,8 +167,337 @@
 				</a>
 			</div>
 			<div class="pseudo">
-					<a href="#" class="btn">Смотреть все</a>
+				<a href="#" class="btn">Смотреть все</a>
 			</div>
+		  </div>
+		 <div class="gaseous_state_item" data-click="slider2">
+		    <div class="title">Баллоны для газов</div>
+			<div class="gaseous_state_slider">
+				<a href="#" class="gaseous_item">
+					<div class="caption">Азот</div>
+					<div class="element">N</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Углекислота</div>
+					<div class="element">CO<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Кислород</div>
+					<div class="element">O<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Ацетилен</div>
+					<div class="element">C<sub>2</sub>H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Углекислота</div>
+					<div class="element">CO<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+			</div>
+			<div class="pseudo">
+				<a href="#" class="btn">Смотреть все</a>
+			</div>
+		  </div>
+		  <div class="gaseous_state_item" data-click="slider3">
+		    <div class="title">Редкие и чистые газы</div>
+			<div class="gaseous_state_slider">
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Кислород</div>
+					<div class="element">O<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Ацетилен</div>
+					<div class="element">C<sub>2</sub>H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Углекислота</div>
+					<div class="element">CO<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+			</div>
+			<div class="pseudo">
+				<a href="#" class="btn">Смотреть все</a>
+			</div>
+		  </div>
+		  <div class="gaseous_state_item" data-click="slider4">
+		    <div class="title">Газовые смеси</div>
+			<div class="gaseous_state_slider">
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Кислород</div>
+					<div class="element">O<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Ацетилен</div>
+					<div class="element">C<sub>2</sub>H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Углекислота</div>
+					<div class="element">CO<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+			</div>
+			<div class="pseudo">
+				<a href="#" class="btn">Смотреть все</a>
+			</div>
+		  </div>
+		  <div class="gaseous_state_item" data-click="slider5">
+		    <div class="title">Газы в жидкообразном состоянии</div>
+			<div class="gaseous_state_slider">
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Кислород</div>
+					<div class="element">O<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Ацетилен</div>
+					<div class="element">C<sub>2</sub>H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Углекислота</div>
+					<div class="element">CO<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+			</div>
+			<div class="pseudo">
+				<a href="#" class="btn">Смотреть все</a>
+			</div>
+		  </div>
+		  <div class="gaseous_state_item" data-click="slider6">
+		    <div class="title">Оборудование и материалы</div>
+			<div class="gaseous_state_slider">
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Кислород</div>
+					<div class="element">O<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Ацетилен</div>
+					<div class="element">C<sub>2</sub>H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Углекислота</div>
+					<div class="element">CO<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+			</div>
+			<div class="pseudo">
+				<a href="#" class="btn">Смотреть все</a>
+			</div>
+		  </div>
+		  <div class="gaseous_state_item" data-click="slider7">
+		    <div class="title">Продукция компании AdBlue</div>
+			<div class="gaseous_state_slider">
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Кислород</div>
+					<div class="element">O<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Ацетилен</div>
+					<div class="element">C<sub>2</sub>H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Углекислота</div>
+					<div class="element">CO<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Водород</div>
+					<div class="element">H<sub>2</sub></div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Аргон</div>
+					<div class="element">Ar</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+				<a href="#" class="gaseous_item">
+					<div class="caption">Гелий</div>
+					<div class="element">He</div>
+					<div class="price">от 76 руб.</div>
+				</a>
+			</div>
+			<div class="pseudo">
+				<a href="#" class="btn">Смотреть все</a>
+			</div>
+		  </div>
 		</div>
 	</section>
 	<section class="feedback_block p80">
