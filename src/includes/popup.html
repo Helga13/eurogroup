@@ -83,7 +83,6 @@
 	</div>
 </div>
 
-
 <div class="overlay popup" id="js-search">
 	<div class="popup_content">
 	<a href="#" class="popup_close">
@@ -99,4 +98,41 @@
 				</form>
 			</div>
 	</div>
+</div>
+
+<div class="overlay popup inner" id="js-popupCall">
+  <a href="#" class="popup_close">
+	 <svg xmlns="http://www.w3.org/2000/svg" class="">
+      	 <use xlink:href="#s-close"></use>
+    </svg>
+	</a>
+	<div class="popup_content">
+	<form action="/">
+	  <div class="popup_title">Форма обратной связи</div>
+	  <p>Пожалуйста, введите свои контактные данные для получения информации.</p>
+			<div class="field">
+				<label for="name">Ваше имя</label>
+				<input id="name" name="name" type="text" required="">
+			</div>
+			<div class="field tabs">
+					<div class="tabs_caption">
+						<div class="tab_radio active"><label for="phone" class="tab"><span></span>Номер телефона</label></div>
+					  <div class="tab_radio"><label for="mail" class="tab"><span></span>Электронная почта</label></div>
+          </div>
+					<div class="tabs_content active">
+						<input class="tab_content active" id="phone" name="phone" type="text" placeholder="+375 (__) ___ __ __">
+					</div>
+				 	<div class="tabs_content">
+				 		<input class="tab_content" id="mail" name="mail" type="text">
+					</div>
+				</div>
+				<div class="field textarea">
+				<label for="text">Интересующий вопрос:</label>
+				<textarea name="" id="text" required></textarea>
+			</div>
+				<div class="field field_btn">
+					<button type="submit" class="btn">Задать вопрос</button>
+				</div>
+	</form>	
+    </div>
 </div>

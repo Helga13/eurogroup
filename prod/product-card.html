@@ -290,7 +290,7 @@
 </svg>
 <header class="header_inner">
 	<div class="nav_top">
-		<a href="#" class="menu_btn js-btn">
+		<a href="#" class="menu_btn js-toggle-menu">
 			<svg xmlns="http://www.w3.org/2000/svg" class="icon-burger">
       	<use xlink:href="#s-burger"></use>
     	</svg>
@@ -312,7 +312,7 @@
     	</svg>
 			+375 29 112-34-78
 		</a>
-		<a class="nav_link link_search" href="#">
+		<a class="nav_link link_search js-search" href="#">
 			<svg xmlns="http://www.w3.org/2000/svg" class="icon-search">
       	<use xlink:href="#s-search"></use>
     	</svg>
@@ -320,7 +320,7 @@
 	</div>
 	<div class="logo">
 		<div class="logo_first">
-			<a href="/"><img src="img/logo.png" alt=""></a>
+			<a href="/"><img src="img/logo_text.png" alt=""></a>
 		</div>
 		
 	</div>
@@ -507,7 +507,7 @@
 									<input type="text" class="input" value="1">
 									<button class="number__plus js-plus-number" type="button">+</button>
 								</div>
-								<a href="#" class="btn">Заказать</a>
+								<a href="#" class="btn order_btn js-popupCall">Заказать</a>
 							</div>
 						</div>
 						<div class="text_subtitle">Подробное описание товара</div>
@@ -630,7 +630,7 @@
 		<div class="wrap">
 			<div class="feedback">
 				<div class="feedback_title">Всегда готовы ответить на ваши вопросы</div>
-				<a href="#" class="btn">Связаться с нами</a>
+				<a href="#" class="btn js-popupCall">Связаться с нами</a>
 			</div>
 		</div>
 	</section>
@@ -645,6 +645,144 @@
 	</div>
 	<div class="copyright">&copy; НП ООО «Еврогрупп». 2017</div>
 </footer>
+<div class="overlay popup" id="js-menu">
+	<div class="popup_content">
+	<a href="#" class="popup_close">
+	    <svg xmlns="http://www.w3.org/2000/svg" class="">
+      	     <use xlink:href="#s-close"></use>
+        </svg>
+	</a>
+		<div class="popup_title">Меню сайта</div>
+		<div class="popup_subtitle">Товары</div>
+		<ul>
+		  <li><a href="#" class="caption">Газы в газообразном виде</a></li>
+		  <li><a href="#">Азот</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#" class="caption">Сухой лед</a></li>
+		  <li><a href="#" class="caption">Баллоны для газов</a></li>
+		  <li><a href="#">Баллоны б/у</a></li>
+		  <li><a href="#">Новые баллоны</a></li>
+		  <li><a href="#">Вентеля</a></li>
+		</ul>
+		<ul>
+		  <li><a href="#" class="caption">Редкие и чиcтые газы</a></li>
+		  <li><a href="#">Азот</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#" class="caption">Газовые смеси</a></li>
+		  <li><a href="#">Сварочные смеси</a></li>
+		  <li><a href="#">Пищевые смеси</a></li>
+		  <li><a href="#">Лазерные смеси</a></li>
+		  <li><a href="#" class="caption">Редкие и читые газы</a></li>
+		  <li><a href="#">Азот</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Аргон</a></li>
+		</ul>
+		<ul>
+		  <li><a href="#" class="caption">Газы в жидкообразном состоянии</a></li>
+		  <li><a href="#">Азот</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Кислород</a></li>
+		  <li><a href="#">Углекислота</a></li>
+		  <li><a href="#">Аргон</a></li>
+		  <li><a href="#" class="caption">Оборудование и материалы</a></li>
+		  <li><a href="#">Сварочная проволока</a></li>
+		  <li><a href="#">Щитки</a></li>
+		  <li><a href="#">Электроды</a></li>
+		  <li><a href="#">Перчатки</a></li>
+		  <li><a href="#">Редукторы</a></li>
+		  <li><a href="#">Горелки</a></li>
+		  <li><a href="#" class="caption">Продукция AdBlue</a></li>
+		  <li><a href="#">Реагент Тара</a></li>
+		  <li><a href="#">Оборудование</a></li>
+		</ul>
+		<ul>
+		  <li><a href="#" class="popup_subtitle">Услуги</a></li>
+		  <li><a href="#" class="caption">Аренда баллонов</a></li>
+		  <li><a href="#" class="caption">Перевозка и доставка технических газов</a></li>
+		  <li><a href="#" class="caption">Техническое освидетельствование баллонов</a></li>
+		</ul>
+		<ul>
+		  <li><a href="#" class="popup_subtitle">Статьи</a></li>
+		  <li><a href="#" class="caption">Познавательные статьи</a></li>
+		  <li><a href="#" class="caption">Новости компании</a></li>
+		</ul>
+		<ul>
+		  <li><a href="#" class="popup_subtitle">Полезная информация</a></li>
+		  <li><a href="#" class="caption">О компании</a></li>
+		  <li><a href="#" class="caption">Контакты</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="overlay popup" id="js-search">
+	<div class="popup_content">
+	<a href="#" class="popup_close">
+	    <svg xmlns="http://www.w3.org/2000/svg" class="">
+      	     <use xlink:href="#s-close"></use>
+        </svg>
+	</a>
+		<div class="popup_title">Поиск товаров</div>
+			<div class="search_block">
+				<form class="search">
+					<input type="search" name="q" placeholder=""> 
+					<input type="submit" value="Найти товар" class="btn btn_search">
+				</form>
+			</div>
+	</div>
+</div>
+
+<div class="overlay popup inner" id="js-popupCall">
+  <a href="#" class="popup_close">
+	 <svg xmlns="http://www.w3.org/2000/svg" class="">
+      	 <use xlink:href="#s-close"></use>
+    </svg>
+	</a>
+	<div class="popup_content">
+	<form action="/">
+	  <div class="popup_title">Форма обратной связи</div>
+	  <p>Пожалуйста, введите свои контактные данные для получения информации.</p>
+			<div class="field">
+				<label for="name">Ваше имя</label>
+				<input id="name" name="name" type="text" required="">
+			</div>
+			<div class="field tabs">
+					<div class="tabs_caption">
+						<div class="tab_radio active"><label for="phone" class="tab"><span></span>Номер телефона</label></div>
+					  <div class="tab_radio"><label for="mail" class="tab"><span></span>Электронная почта</label></div>
+          </div>
+					<div class="tabs_content active">
+						<input class="tab_content active" id="phone" name="phone" type="text" placeholder="+375 (__) ___ __ __">
+					</div>
+				 	<div class="tabs_content">
+				 		<input class="tab_content" id="mail" name="mail" type="text">
+					</div>
+				</div>
+				<div class="field textarea">
+				<label for="text">Интересующий вопрос:</label>
+				<textarea name="" id="text" required></textarea>
+			</div>
+				<div class="field field_btn">
+					<button type="submit" class="btn">Задать вопрос</button>
+				</div>
+	</form>	
+    </div>
+</div>
 <script src="js/common.js"></script>
 </body>
 </html>

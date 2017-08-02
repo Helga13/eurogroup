@@ -321,6 +321,7 @@
 	<div class="logo">
 		<div class="logo_first">
 			<a href="/"><img src="img/logo.png" alt=""></a>
+			<a href="/" class="logo_modifier"><img src="img/logo_text.png" alt=""></a>
 		</div>
 		
 	</div>
@@ -344,52 +345,64 @@
 		<div class="wrap">
 			<div class="section_title">Основные направления нашей деятельности</div>
 			<figure class="direction_item">
+			  <a href="#">
 				<div class="img_block">
 					<svg xmlns="http://www.w3.org/2000/svg" class="">
 						<use xlink:href="#s-gasHome"></use>
 					</svg>
 				</div>
 				<figcaption>Продажа газообразных продуктов разделения воздуха</figcaption>
+		      </a>
 			</figure>
 			<figure class="direction_item">
+			  <a href="#">
 				<div class="img_block">
 					<svg xmlns="http://www.w3.org/2000/svg" class="">
 						<use xlink:href="#s-ballonHome"></use>
 					</svg>
 				</div>
 				<figcaption>Продажа и аренда баллонов для технических газов</figcaption>
+              </a>
 			</figure>
 			<figure class="direction_item">
+			  <a href="#">
 				<div class="img_block">
 					<svg xmlns="http://www.w3.org/2000/svg" class="">
 						<use xlink:href="#s-materialsHome"></use>
 					</svg>
 				</div>
 				<figcaption>Продажа сварочного и криогенного оборудования</figcaption>
+              </a>
 			</figure>
 			<figure class="direction_item">
+			  <a href="#">
 				<div class="img_block">
 					<svg xmlns="http://www.w3.org/2000/svg" class="">
 						<use xlink:href="#s-sertHome"></use>
 					</svg>
 				</div>
 				<figcaption>Техническое осведетельствование баллонов</figcaption>
+              </a>
 			</figure>
 			<figure class="direction_item">
+			  <a href="#">
 				<div class="img_block">
 					<svg xmlns="http://www.w3.org/2000/svg" class="">
 						<use xlink:href="#s-waterHome"></use>
 					</svg>
 				</div>
 				<figcaption>Продажа газов в жидком виде</figcaption>
+              </a>
 			</figure>
 			<figure class="direction_item">
+			  <a href="#">
 				<div class="img_block">
 					<svg xmlns="http://www.w3.org/2000/svg" class="">
 						<use xlink:href="#s-adblueHome"></use>
 					</svg>
 				</div>
 				<figcaption>Продажа реагента  Adblue</figcaption>
+              </a>
 			</figure>
 		</div>
 	</section>
@@ -544,7 +557,6 @@
 	</div>
 </div>
 
-
 <div class="overlay popup" id="js-search">
 	<div class="popup_content">
 	<a href="#" class="popup_close">
@@ -560,6 +572,43 @@
 				</form>
 			</div>
 	</div>
+</div>
+
+<div class="overlay popup inner" id="js-popupCall">
+  <a href="#" class="popup_close">
+	 <svg xmlns="http://www.w3.org/2000/svg" class="">
+      	 <use xlink:href="#s-close"></use>
+    </svg>
+	</a>
+	<div class="popup_content">
+	<form action="/">
+	  <div class="popup_title">Форма обратной связи</div>
+	  <p>Пожалуйста, введите свои контактные данные для получения информации.</p>
+			<div class="field">
+				<label for="name">Ваше имя</label>
+				<input id="name" name="name" type="text" required="">
+			</div>
+			<div class="field tabs">
+					<div class="tabs_caption">
+						<div class="tab_radio active"><label for="phone" class="tab"><span></span>Номер телефона</label></div>
+					  <div class="tab_radio"><label for="mail" class="tab"><span></span>Электронная почта</label></div>
+          </div>
+					<div class="tabs_content active">
+						<input class="tab_content active" id="phone" name="phone" type="text" placeholder="+375 (__) ___ __ __">
+					</div>
+				 	<div class="tabs_content">
+				 		<input class="tab_content" id="mail" name="mail" type="text">
+					</div>
+				</div>
+				<div class="field textarea">
+				<label for="text">Интересующий вопрос:</label>
+				<textarea name="" id="text" required></textarea>
+			</div>
+				<div class="field field_btn">
+					<button type="submit" class="btn">Задать вопрос</button>
+				</div>
+	</form>	
+    </div>
 </div>
 <script src="js/common.js"></script>
 </body>

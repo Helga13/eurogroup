@@ -33,12 +33,46 @@ $(document).ready(function () {
 		return false;
 	});
   
+  // recall
+  
+  $('.js-popupCall').on('click', function(e) {
+        e.preventDefault();
+		if ($(this).hasClass('is-active')) {
+			$("#js-popupCall").fadeOut(100);
+			$(this).removeClass('is-active');
+            body.removeClass('no-scroll');
+		} else {
+			$('#js-popupCall').fadeIn(100);
+			$(this).addClass('is-active');
+            body.toggleClass('no-scroll');
+		}
+		return false;
+	});
+    $('.popup.inner .popup_content').click(function(e) {
+		e.stopPropagation();
+	}); 
+  
   $('.popup_close').on('click', function(e){
     e.preventDefault();
-    $('#js-menu, #js-search').fadeOut(100);
-    $('.js-toggle-menu, .js-search').removeClass('is-active');
+    $('#js-menu, #js-search, #js-popupCall').fadeOut(100);
+    $('.js-toggle-menu, .js-search, .js-popupCall').removeClass('is-active');
     body.removeClass("no-scroll");
   });
+  
+  $('.order_btn').on('click', function(e) {
+    $('#js-popupCall .btn').text('Заказать');
+  });
+  
+  $('.get_price').on('click', function(e) {
+    $('#js-popupCall .btn').text('Узнать цену');
+  });
+  
+  // tabs
+  
+    $('.tabs_caption').on('click', '.tab_radio:not(.active)', function () {	      $(this).addClass('active').siblings().removeClass('active').closest('div.tabs').find('.tabs_content').removeClass('active').eq($(this).index()).addClass('active');
+	});
+  
+  $("#phone").mask("+375 (99) 999 99 99");
 	
 	// main slider
 	
@@ -117,6 +151,17 @@ $(document).ready(function () {
             $('.gaseous_state_block .gaseous_state_item').removeClass('is-active');
 			$('.gaseous_state_block .gaseous_state_item[data-click="'+a+'"]').addClass('is-active');
 		});
-
+    
+  $(window).scroll(function(){
+		// 200px от верха
+		if ($(window).scrollTop() > '200'){
+//			$('header:not(.header_inner)').css({"background-color":"#fff"});
+			$('header:not(.header_inner)').addClass('modifier');
+		}else{
+//          $('header:not(.header_inner)').css({"background-color":"transparent"});
+          $('header:not(.header_inner)').removeClass('modifier');
+        }
+		
+	});
 	
 })
