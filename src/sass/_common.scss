@@ -219,7 +219,8 @@ header{
   background-color: #fff;
   .logo_first{
 //    padding: 1px 15px 2px;
-    padding: 30px 0;
+    padding: 31px 0;
+    width: 128px;
   }
   .nav_top,
   .right_menu{
@@ -250,7 +251,6 @@ header{
 }
 
 .logo{
-  overflow: hidden;
   img{
     width: 100%;
   }
@@ -817,11 +817,6 @@ input[type="search"]{
   margin: 0;
 }
 
-.section_slider,
-.slick-track{
-  //	height: 100vh;
-}
-
 .slider_item{
   position: relative;
   height: 100%;
@@ -846,8 +841,6 @@ input[type="search"]{
       letter-spacing: 0.025em;
       text-transform: uppercase;
       color: #fff;
-      //          display: table-cell;
-      //          height: 100%;
       &:after{
         content: '';
         display: inline-block;
@@ -1092,7 +1085,6 @@ input[type="search"]{
 
 .heading{
   min-height: 186px;
-  //	overflow: hidden;
   background: url('../img/other/heading.jpg') center no-repeat;
   .wrap{
     z-index: 3;
@@ -1113,7 +1105,7 @@ input[type="search"]{
       object-fit: none;
     }
   }
-} 
+}
 
 .clear{
   clear: both;
@@ -1444,7 +1436,7 @@ input[type="search"]{
   display: inline-block;
   color: #fff;
   padding: 12px;
-  height: 144px;
+  min-height: 144px;
   width: 144px;
   margin: 0 20px;
   position: relative;
@@ -1457,6 +1449,9 @@ input[type="search"]{
     .element{
       text-shadow: none;
     }
+  }
+  .caption{
+    min-height: 30px;
   }
   .caption,
   .price{
@@ -1476,6 +1471,10 @@ input[type="search"]{
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
+    img{
+      height: 95px;
+      max-width: 210px;
+    }
   }
   .price{
     text-transform: lowercase;
