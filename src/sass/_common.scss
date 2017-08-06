@@ -1915,3 +1915,41 @@ input[type="search"]{
     }
   }
 }
+
+.tablet_visible{
+	background: url('../img/bg/tablet_bg.jpg') center no-repeat;
+	background-size: cover;
+	position: relative;
+	text-align: center;
+	padding: 110px 0 78px;
+	display: none;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(38,30,84,.5);
+	}
+	.slogan{
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 48px;
+		line-height: 60px;
+		letter-spacing: 0.025em;
+		font-family: 'rubikBold', $font-stack-helvetica;
+		padding: 42px 0;
+	}
+	.phone_main{
+		color: #fff;
+		font-size: 24px;
+		line-height: normal;
+		letter-spacing: 0.025em;
+		font-family: 'rubikMedium', $font-stack-helvetica;
+	}
+	.icon-phone{
+		width: 22px;
+		height: 22px;
+	}
+}

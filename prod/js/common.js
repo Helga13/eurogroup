@@ -104,10 +104,10 @@ $(document).ready(function () {
   // main slider
   $('.section_slider').slick({
     dots: true
-//    , infinite: true
+    , infinite: true
     , speed: 800
     , fade: true
-//    , autoplay: true
+    , autoplay: true
     , cssEase: 'ease-in-out'
   , });
   $('.news_slider').slick({
