@@ -103,8 +103,8 @@ $(document).ready(function () {
   $("#phone").mask("+375 (99) 999 99 99");
   // main slider
   $('.section_slider').slick({
-    dots: true
-    , infinite: true
+//    dots: true
+     infinite: true
     , speed: 800
     , fade: true
     , autoplay: true
@@ -122,6 +122,26 @@ $(document).ready(function () {
   $('.subcategory_slider').slick({
     slidesToShow: 5
     , slidesToScroll: 1
+    , responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
   });
 
   function number() {
@@ -173,7 +193,18 @@ $(document).ready(function () {
     $('.gaseous_state_block .gaseous_state_item').removeClass('is-active');
     $('.gaseous_state_block .gaseous_state_item[data-click="' + a + '"]').addClass('is-active');
   });
-  $(window).scroll(function () {
+//  $(window).scroll(function () {
+    // 200px от верха
+//    if ($(window).scrollTop() > '200') {
+//      $('header:not(.header_inner)').addClass('modifier');
+//    }
+//    else {
+//      $('header:not(.header_inner)').removeClass('modifier');
+//    }
+//  });
+  
+  if($(window).width() > 480) {
+    $(window).scroll(function () {
     // 200px от верха
     if ($(window).scrollTop() > '200') {
       $('header:not(.header_inner)').addClass('modifier');
@@ -182,26 +213,8 @@ $(document).ready(function () {
       $('header:not(.header_inner)').removeClass('modifier');
     }
   });
-  $('img.svg').each(function () {
-    var $img = $(this);
-    var imgID = $img.attr('id');
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-    $.get(imgURL, function (data) {
-      // Get the SVG tag, ignore the rest
-      var $svg = $(data).find('svg');
-      // Add replaced image's ID to the new SVG
-      if (typeof imgID !== 'undefined') {
-        $svg = $svg.attr('id', imgID);
-      }
-      // Add replaced image's classes to the new SVG
-      if (typeof imgClass !== 'undefined') {
-        $svg = $svg.attr('class', imgClass + ' replaced-svg');
-      }
-      // Remove any invalid XML tags as per http://validator.w3.org
-      $svg = $svg.removeAttr('xmlns:a');
-      // Replace image with new SVG
-      $img.replaceWith($svg);
-    }, 'xml');
-  });
+  }else{
+     $('header:not(.header_inner)').addClass('modifier');
+  }
+
 })
