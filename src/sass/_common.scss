@@ -1315,12 +1315,12 @@ input[type="search"]{
   font-size: 0;
   text-align: center;
   margin: 0 -6px;
-  padding: 26px 0 82px;
+  padding: 20px 0 76px;
   .item{
     display: inline-block;
     vertical-align: top;
     width: 12.5%;
-    padding: 0 6px;
+    padding: 6px;
     position: relative;
     cursor: pointer;
   }
@@ -1365,6 +1365,15 @@ input[type="search"]{
     height: auto;
     max-height: 500px;
   }
+  .item.stop:hover .subcategory{
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+  }
+  .item .see_all{
+    text-transform: uppercase;
+    display: none;
+  }
 }
 
 .subcategory{
@@ -1387,6 +1396,7 @@ input[type="search"]{
     width: 100%;
     border-top: 1px solid #edf4fc;
     padding: 7px 0;
+    font-family: 'rubikMedium', $font-stack-helvetica;
     transition: color .3s ease-in-out, background-color .3s ease-in-out;
     &:hover{
       color: #fff;

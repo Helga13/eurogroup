@@ -82,6 +82,32 @@ $(document).ready(function () {
   $('.gaseous_state_slider').slick({
     slidesToShow: 7
     , slidesToScroll: 1
+    , responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 5
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+      {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
   });
   $('.subcategory_slider').slick({
     slidesToShow: 5
@@ -148,7 +174,8 @@ $(document).ready(function () {
   }
   number();
   // catalog toggle
-  $('.slider_toggle > .item.stop').on("click", function (e) {
+  if($(window).width() > 600){
+    $('.slider_toggle > .item.stop').on("click", function (e) {
     e.preventDefault();
     var a;
     a = this.id;
@@ -157,6 +184,8 @@ $(document).ready(function () {
     $('.gaseous_state_block .gaseous_state_item').removeClass('is-active');
     $('.gaseous_state_block .gaseous_state_item[data-click="' + a + '"]').addClass('is-active');
   });
+  }
+  
 //  $(window).scroll(function () {
     // 200px от верха
 //    if ($(window).scrollTop() > '200') {
@@ -166,6 +195,16 @@ $(document).ready(function () {
 //      $('header:not(.header_inner)').removeClass('modifier');
 //    }
 //  });
+  
+  //accordeon catalog
+  
+  if($(window).width() < 601) {
+    $('.catalog_block > .item > .cat_item > a >*').unwrap('a');
+    $('.catalog_block > .item').on('click', function(){
+     
+      $(this).addClass('visible').siblings().removeClass('visible');
+    });
+  }
   
   if($(window).width() > 480) {
     $(window).scroll(function () {
